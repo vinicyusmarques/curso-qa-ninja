@@ -1,3 +1,5 @@
 #Github
 
-Primeiros passos do curso QAninja 
+Primeiros passos do curso QAninja
+
+vinicyusmarquess@gmail.com 
