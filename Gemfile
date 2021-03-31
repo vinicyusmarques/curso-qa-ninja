@@ -1,4 +1,8 @@
 source "https://rubygems.org/"
 
-gem 'capybara', '3.35'
-gem 'cucumber', '5.2'
+gem 'capybara'
+gem 'cucumber'
+gem 'selenium-webdriver'
+gem 'faker'
+gem 'rspec'
+gem "report_builder"
