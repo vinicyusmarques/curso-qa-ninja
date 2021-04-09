@@ -5,12 +5,17 @@ Dado('que o usuario esteja na pagina tela inicial') do
   Dado('que o usuario esteja na tela de identificacao') do
     find(".login").click
   end
-  
-  Dado('informa o e-mail para registrar') do
-    find("#email_create").set Faker::Internet.email
+
+  Dado('informa o {string}') do |string|
+    case string
+    when 'e-mail que nao e possivel registrar' 
+      then find("#email_create").set ""
+    when 'e-mail para registrar' 
+      then find("#email_create").set Faker::Internet.email
+    end
     click_link_or_button "Create an account"
   end
-  
+
   Quando('o usuario preenche as informacoes obrigatorias') do
     find("#uniform-id_gender1").click
     find("#customer_firstname").set Faker::Name.first_name
