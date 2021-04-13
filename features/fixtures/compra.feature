@@ -9,8 +9,14 @@ Contexto:
     E busco o produto Faded Short Sleeve T-shirts
 
 @compracomsucesso
-Cenario: Compra finalizada com sucesso
+Cenario: Compra com sucesso
     Dado que usuario adiciona o produto no carrinho
     E avança para o checkout da compra
     Quando finalizo o processo de compra
     Entao deve ser informado o pedido foi realizado
+
+@comprasemsucesso
+Cenario: Compra sem sucesso
+
+
+

@@ -12,20 +12,28 @@ Dado('que o usuario esteja logado') do
   end
   
   Dado('que usuario adiciona o produto no carrinho') do
-    expect(page).to have_button('Add to cart')
-
-    #expect(page).to have_content('Add to cart')
-    sleep 5
+    addcart = page.find('span', text: "Add to cart")
+    addcart.click
   end
   
   Dado('avança para o checkout da compra') do
-    pending # Write code here that turns the phrase above into concrete actions
+    c1 = page.find('span', text: "Proceed to checkout")
+    c1.click
+    c2 = page.find('span', text: "Proceed to checkout")
+    c2.click
   end
   
   Quando('finalizo o processo de compra') do
-    pending # Write code here that turns the phrase above into concrete actions
+    c3 = page.find('span', text: "Proceed to checkout")
+    c3.click
+    find('.checker').click
+    c4 = page.find('span', text: "Proceed to checkout")
+    c4.click
+    find(".bankwire").click
   end
   
   Entao('deve ser informado o pedido foi realizado') do
-    pending # Write code here that turns the phrase above into concrete actions
+    c5 = page.find('span', text: "I confirm my order")
+    c5.click
+    expect(page).to have_text "Your order on My Store is complete."
   end
