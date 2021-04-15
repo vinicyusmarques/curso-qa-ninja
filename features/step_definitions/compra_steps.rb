@@ -9,16 +9,19 @@ Dado('que o usuario esteja logado') do
   Dado('busco o produto Faded Short Sleeve T-shirts') do
     find("#search_query_top").set "Faded Short Sleeve T-shirts"
     click_button "Search"
-  end
-  
-  Dado('que usuario adiciona o produto no carrinho') do
+    click_link_or_button "Faded Short Sleeve T-shirts", match: :first
+    #find("div[title*='Faded Short Sleeve T-shirts']").click
+   end
+
+  Dado('que usuario adiciona o produto no carrinho') do    
     addcart = page.find('span', text: "Add to cart")
     addcart.click
   end
-  
+  #assert 
   Dado('avança para o checkout da compra') do
     c1 = page.find('span', text: "Proceed to checkout")
     c1.click
+  
     c2 = page.find('span', text: "Proceed to checkout")
     c2.click
   end

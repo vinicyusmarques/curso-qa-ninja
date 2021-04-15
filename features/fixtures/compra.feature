@@ -15,8 +15,5 @@ Cenario: Compra com sucesso
     Quando finalizo o processo de compra
     Entao deve ser informado o pedido foi realizado
 
-@comprasemsucesso
-Cenario: Compra sem sucesso
-
 
 
