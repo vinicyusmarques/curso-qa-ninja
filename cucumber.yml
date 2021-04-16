@@ -1,0 +1,4 @@
+default:  -p format-default -p report-html -p report-json
+format-default: --no-source --color --format pretty
+report-html:    --format html --out=results/report.html
+report-json:    --format json --out=results/report.json
