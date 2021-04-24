@@ -24,7 +24,7 @@ at_exit do
       config.report_path = 'results/report'
       #config.report_path = 'relatório de teste'
       config.report_types = %i[html]
-      config.report_title = 'Relatório dos testes'
+      config.report_title = 'report'
       config.additional_info = { 'Navegador' => 'Web' }
     end
     ReportBuilder.build_report
