@@ -14,12 +14,12 @@ Contexto:
         Quando o usuario preenche as informacoes obrigatorias  
         Então deve ser redirecionado para a area logada
 
-    @cadastrosememail
+    @cadastro
     Cenario: Cadastro de cliente sem email
         E informa o 'e-mail que nao e possivel registrar'
         Entao deve ser informado do email invalido
 
-    @informacoesfaltantes
+    @cadastro
     Cenario: Cadastro sem informacoes obrigatorias
         E informa o 'e-mail para registrar'
         Quando o usuario nao informa os dados obrigatorios

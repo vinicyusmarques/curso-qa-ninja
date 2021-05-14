@@ -20,3 +20,11 @@ cadastro_referenciaendereco: "#alias"
 
 #elementos tela logada
 validacao_cadastro: "Welcome to your account. Here you can manage all of your personal information and orders"
+
+
+#elementos de autenticação de usuario
+auth_email: "#email"
+auth_senha: "#passwd"
+
+#elementos buscar de produto
+insere_nome_produto: "#search_query_top"

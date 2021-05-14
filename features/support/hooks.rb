@@ -6,6 +6,9 @@ Before do
     window.resize_to(1200, 1200)
     window.maximize
     @cadastrocliente = CadastroCliente.new
+    @login = Login.new
+    @buscaproduto = BuscarProduto.new
+    @finalizarcompra = FinalizarCompra.new
 end
 
 # Before do
