@@ -1,0 +1,22 @@
+
+#elementos home
+home_botaologin: ".login"
+
+#elementos create an account
+createaccount_email: "#email_create"
+
+#elementos do formulario de cadastro
+cadastro_primeironome: "#customer_firstname"
+cadastro_ultimonome: "#customer_lastname"
+cadastro_senha: "#passwd"
+cadastro_nomeendereco: "#firstname"
+cadastro_ultimonomeendereco: "#lastname"
+cadastro_endereco: "#address1"
+cadastro_cidade: "#city"
+cadastro_estado: "select[name='id_state'] option[value='1']"
+cadastro_cep: "#postcode"
+cadastro_celular: "#phone_mobile"
+cadastro_referenciaendereco: "#alias"
+
+#elementos tela logada
+validacao_cadastro: "Welcome to your account. Here you can manage all of your personal information and orders"

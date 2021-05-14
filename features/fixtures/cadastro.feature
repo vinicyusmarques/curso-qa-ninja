@@ -8,7 +8,7 @@ Contexto:
     Dado que o usuario esteja na pagina tela inicial
     E que o usuario esteja na tela de identificacao
 
-    @cadastrocliente
+    @cadastro
     Cenario: Cadastro de cliente com sucesso
         E informa o 'e-mail para registrar'
         Quando o usuario preenche as informacoes obrigatorias  

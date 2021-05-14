@@ -1,10 +1,16 @@
 require 'report_builder'
+
 Before do
     Capybara.current_session.driver.browser.manage.delete_all_cookies
     window = Capybara.current_session.current_window
     window.resize_to(1200, 1200)
     window.maximize
+    @cadastrocliente = CadastroCliente.new
 end
+
+# Before do
+#     @cadastrocliente = CadastroCliente.new
+# end
 
 After do |scn|
     binding.pry if scn.failed? && ENV['debug']
@@ -26,6 +32,8 @@ at_exit do
       config.report_types = %i[html]
       config.report_title = 'report'
       config.additional_info = { 'Navegador' => 'Web' }
+      #config.additional_info = { "Projeto" => "Luma", "Funcionalidade" => "Cadastro Cliente", "Canal/Ambiente" => "Homolog", "Data de execução" => "#{data}" " #{hora}", "QA" => "Vinicyus Marques" }
     end
     ReportBuilder.build_report
 end
+

@@ -8,7 +8,7 @@ Contexto:
     Dado que o usuario esteja logado
     E busco o produto Faded Short Sleeve T-shirts
 
-@compracomsucesso
+@apresentacao
 Cenario: Compra com sucesso
     Dado que usuario adiciona o produto no carrinho
     E avança para o checkout da compra
