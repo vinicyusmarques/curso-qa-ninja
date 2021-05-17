@@ -1,11 +1,11 @@
 Dado('avança para o checkout da compra') do
-    @finalizarcompra.checkout_pedido
+    @finalizarcompra.checkout
   end
   
   Quando('finalizo o processo de compra') do
-    @finalizarcompra.finalizacao_pedido
+    @finalizarcompra.finish
   end
   
   Entao('deve ser informado o pedido foi realizado') do
-    @finalizarcompra.confirmacao_compra
+    @finalizarcompra.confirmPurchase
   end

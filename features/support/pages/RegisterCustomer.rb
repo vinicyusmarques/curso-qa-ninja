@@ -1,4 +1,4 @@
-class CadastroCliente
+class RegisterCustomer
     include Capybara::DSL
     include RSpec::Matchers
 
@@ -16,15 +16,15 @@ class CadastroCliente
         @email = Faker::Internet.email
     end
     
-    def acessar_pagina_inicial
+    def accessHome
         visit("http://automationpractice.com/index.php")
     end
 
-    def acessar_pagina_identificacao
+    def accessAuthentication
         find(EL["home_botaologin"]).click
     end
 
-    def preencher_label_email(string)
+    def fillEmail(string)
         case string
         when 'e-mail que nao e possivel registrar' 
           then find(EL["createaccount_email"]).set ""
@@ -34,7 +34,7 @@ class CadastroCliente
         click_link_or_button "Create an account"
     end
 
-    def preencher_formulario
+    def fillForm
         find("#uniform-id_gender1").click
         find(EL["cadastro_primeironome"]).set @primeironome
         find(EL["cadastro_ultimonome"]).set @ultimonome
@@ -50,7 +50,33 @@ class CadastroCliente
         click_link_or_button "Register"
     end
 
-    def validar_cadastro
+    def validateRegistration
         expect(page).to have_text EL["validacao_cadastro"]
+    end
+
+    def fillFormEmpty
+        find("#uniform-id_gender1").click
+        find("#customer_firstname").set ""
+        find("#customer_lastname").set ""
+        find("#passwd").set ""
+        find("#firstname").set ""
+        find("#lastname").set ""
+        find("#address1").set  "" 
+        find("#city").set  ""
+        find("select[name='id_state'] option[value='']").click
+        find("#postcode").set ""
+        find("#phone_mobile").set ""
+        find("#alias").set ""
+    end
+
+    def alertFieldsEmpty
+        expect(page).to have_text "You must register at least one phone number"
+        expect(page).to have_text "lastname is required"
+        expect(page).to have_text "firstname is required"
+        expect(page).to have_text "passwd is required"
+        expect(page).to have_text "address1 is required"
+        expect(page).to have_text "city is required"
+        expect(page).to have_text "The Zip/Postal code you've entered is invalid. It must follow this format: 00000"
+        expect(page).to have_text "This country requires you to choose a State"
     end
 end

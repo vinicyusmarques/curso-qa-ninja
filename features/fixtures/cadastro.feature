@@ -19,7 +19,7 @@ Contexto:
         E informa o 'e-mail que nao e possivel registrar'
         Entao deve ser informado do email invalido
 
-    @cadastro
+    @cadastroFields
     Cenario: Cadastro sem informacoes obrigatorias
         E informa o 'e-mail para registrar'
         Quando o usuario nao informa os dados obrigatorios

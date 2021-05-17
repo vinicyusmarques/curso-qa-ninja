@@ -7,7 +7,7 @@ class Login
         @senha = "vini1994"
     end
 
-    def autenticacao
+    def authentication
         find(EL["auth_email"]).set @email
         find(EL["auth_senha"]).set @senha
         click_button "Sign in" 

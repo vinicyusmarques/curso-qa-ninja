@@ -5,10 +5,10 @@ Before do
     window = Capybara.current_session.current_window
     window.resize_to(1200, 1200)
     window.maximize
-    @cadastrocliente = CadastroCliente.new
+    @cadastrocliente = RegisterCustomer.new
     @login = Login.new
-    @buscaproduto = BuscarProduto.new
-    @finalizarcompra = FinalizarCompra.new
+    @buscaproduto = SearchProduct.new
+    @finalizarcompra = Checkout.new
 end
 
 # Before do

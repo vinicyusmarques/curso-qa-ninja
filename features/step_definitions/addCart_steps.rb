@@ -1,7 +1,7 @@
   Dado('busco o produto Faded Short Sleeve T-shirts') do
-    @buscaproduto.buscar_produto
+    @buscaproduto.search
    end
 
   Dado('que usuario adiciona o produto no carrinho') do    
-    @buscaproduto.adicionar_produto_ao_carrinho
+    @buscaproduto.addCart
   end  
